@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+}
+
+/* Blue background section */
+.registration-container {
+    width: 90%;
+    max-width: 1400px;
+    min-height: 750px;
+    margin: 20px auto;
+    padding: 70px 30px;
+    background: linear-gradient(135deg, #2878d0, #0755b5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* White registration card */
+.registration-card {
+    width: 100%;
+    max-width: 940px;
+    background-color: #fff;
+    padding: 25px 35px;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.registration-card h2 {
+    font-size: 27px;
+    margin-bottom: 32px;
+    color: #454545;
+}
+
+.registration-card h3 {
+    font-size: 19px;
+    color: #777;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.identity-heading {
+    margin-top: 28px;
+}
+
+/* Three-column form layout */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 25px;
+    row-gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #444;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    height: 45px;
+    padding: 0 14px;
+    border: 1px solid #d5d5d5;
+    border-radius: 4px;
+    outline: none;
+    background-color: #fff;
+    color: #555;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.form-group input::placeholder {
+    color: #999;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #2878d0;
+    box-shadow: 0 0 4px rgba(40, 120, 208, 0.25);
+}
+
+/* Next button */
+.next-button {
+    width: 255px;
+    height: 48px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 4px;
+    background-color: #2878d0;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.next-button span {
+    margin-left: 8px;
+    font-size: 20px;
+}
+
+.next-button:hover {
+    background-color: #145cae;
+}
+
+#message {
+    margin-top: 12px;
+    color: #168447;
+    font-size: 14px;
+}
+
+/* Tablet and mobile responsive design */
+@media (max-width: 768px) {
+    .registration-container {
+        width: 100%;
+        margin: 0;
+        padding: 25px 15px;
+    }
+
+    .registration-card {
+        padding: 22px 18px;
+    }
+
+    .form-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .next-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .registration-card h2 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .registration-card h3 {
+        font-size: 17px;
+    }
+}

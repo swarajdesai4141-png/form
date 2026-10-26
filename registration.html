@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+
+<body>
+
+    <div class="registration-box">
+
+        <h1>Registration</h1>
+
+        <form>
+
+            <!-- Registration Type -->
+            <div class="options">
+                <label>
+                    <input type="radio" name="type" value="personal" checked>
+                    Personal
+                </label>
+
+                <label>
+                    <input type="radio" name="type" value="company">
+                    Company
+                </label>
+            </div>
+
+            <!-- Email -->
+            <div class="input-group">
+                <div class="icon">&#9993;</div>
+                <input type="email" placeholder="Email" required>
+            </div>
+
+            <!-- Name -->
+            <div class="input-group">
+                <div class="icon">&#128100;</div>
+                <input type="text" placeholder="Name" required>
+            </div>
+
+            <!-- Password -->
+            <div class="input-group">
+                <div class="icon">&#128274;</div>
+                <input type="password" placeholder="Password" required>
+            </div>
+
+            <!-- Gender -->
+            <div class="gender">
+                <label>
+                    <input type="radio" name="gender" value="male" checked>
+                    Male
+                </label>
+
+                <label>
+                    <input type="radio" name="gender" value="female">
+                    Female
+                </label>
+            </div>
+
+            <!-- Terms and Register -->
+            <div class="bottom-section">
+
+                <p>
+                    By clicking Register, you agree on our
+                    <a href="#">terms and conditions</a>
+                </p>
+
+                <button type="submit">Register</button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

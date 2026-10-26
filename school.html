@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Championship Registration</title>
+    <link rel="stylesheet" href="school.css">
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h1>School Championship Registration Form</h1>
+
+        <form action="#" method="post">
+
+            <div class="form-group">
+                <label for="school">School name:<span>*</span></label>
+                <input type="text" id="school" name="school" required>
+            </div>
+
+            <div class="form-group">
+                <label>Schooler name:<span>*</span></label>
+                <div class="name-fields">
+                    <input type="text" name="student_first" placeholder="First" aria-label="Student first name"
+                        required>
+                    <input type="text" name="student_last" placeholder="Last" aria-label="Student last name" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Parent name:<span>*</span></label>
+                <div class="name-fields">
+                    <input type="text" name="parent_first" placeholder="First" aria-label="Parent first name" required>
+                    <input type="text" name="parent_last" placeholder="Last" aria-label="Parent last name" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Parent phone:<span>*</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="### ### ####" pattern="[0-9]{10}" maxlength="10"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Parent email:<span>*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="sport">Preferred sport:<span>*</span></label>
+                <select id="sport" name="sport" required>
+                    <option value="">Select a sport</option>
+                    <option value="Cricket">Cricket</option>
+                    <option value="Football">Football</option>
+                    <option value="Basketball">Basketball</option>
+                    <option value="Badminton">Badminton</option>
+                    <option value="Volleyball">Volleyball</option>
+                    <option value="Athletics">Athletics</option>
+                    <option value="Kabaddi">Kabaddi</option>
+                </select>
+            </div>
+
+            <div class="verification">
+                <label>Verification<span>*</span></label>
+                <div class="robot-box">
+                    <input type="checkbox" id="robot" required>
+                    <label for="robot">I'm not a robot</label>
+                    <div class="captcha-icon">🔄<small>reCAPTCHA</small></div>
+                </div>
+            </div>
+
+            <div class="submit-area">
+                <button type="submit">➤ &nbsp; Submit</button>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

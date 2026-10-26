@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="registration-container">
+        <div class="registration-card">
+
+            <h2>Registration</h2>
+
+            <form action="#" method="post">
+
+                <!-- Personal Details -->
+                <h3>Personal Details</h3>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mobile">Mobile number</label>
+                        <input type="tel" id="mobile" placeholder="Enter mobile number" pattern="[0-9]{10}"
+                            maxlength="10" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" required>
+                            <option value="">Select your gender</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="occupation">Occupation</label>
+                        <input type="text" id="occupation" placeholder="Enter occupation" required>
+                    </div>
+
+                </div>
+
+                <!-- Identity Details -->
+                <h3 class="identity-heading">Identity Details</h3>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="idtype">ID Type</label>
+                        <select id="idtype" required>
+                            <option value="">Select ID type</option>
+                            <option>Aadhaar Card</option>
+                            <option>Passport</option>
+                            <option>Voter ID</option>
+                            <option>Driving Licence</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="idnumber">ID Number</label>
+                        <input type="text" id="idnumber" placeholder="Enter ID number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="authority">Issue Authority</label>
+                        <input type="text" id="authority" placeholder="Enter issuing department" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="issuedate">Issue Date</label>
+                        <input type="date" id="issuedate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="state">Issue State</label>
+                        <input type="text" id="state" placeholder="Enter issue state" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="expirydate">Expiry Date</label>
+                        <input type="date" id="expirydate">
+                    </div>
+
+                </div>
+
+                <button type="button" class="next-button" onclick="nextStep()">
+                    Next <span>&rarr;</span>
+                </button>
+
+                <p id="message"></p>
+
+            </form>
+
+        </div>
+    </div>
+
+    <script>
+        function nextStep() {
+            const form = document.querySelector("form");
+
+            if (form.reportValidity()) {
+                document.getElementById("message").textContent =
+                    "Details validated successfully!";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
